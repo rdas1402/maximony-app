@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/maximony-app/static/css/main.917eca8f.css",
-    "main.js": "/maximony-app/static/js/main.55541bd3.js",
-    "static/js/488.d044f4ef.chunk.js": "/maximony-app/static/js/488.d044f4ef.chunk.js",
+    "main.js": "/maximony-app/static/js/main.a65c2ea6.js",
+    "static/js/488.da89d156.chunk.js": "/maximony-app/static/js/488.da89d156.chunk.js",
     "index.html": "/maximony-app/index.html",
     "main.917eca8f.css.map": "/maximony-app/static/css/main.917eca8f.css.map",
-    "main.55541bd3.js.map": "/maximony-app/static/js/main.55541bd3.js.map",
-    "488.d044f4ef.chunk.js.map": "/maximony-app/static/js/488.d044f4ef.chunk.js.map"
+    "main.a65c2ea6.js.map": "/maximony-app/static/js/main.a65c2ea6.js.map",
+    "488.da89d156.chunk.js.map": "/maximony-app/static/js/488.da89d156.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.917eca8f.css",
-    "static/js/main.55541bd3.js"
+    "static/js/main.a65c2ea6.js"
   ]
 }
