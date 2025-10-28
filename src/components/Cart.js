@@ -1,5 +1,6 @@
 // src/components/Cart.js
 import React from 'react';
+import CartItem from './CartItem';
 import '../styles/Cart.css'; // Make sure you have this CSS file
 
 const Cart = ({ isOpen, onClose, cart, onUpdateQuantity, onRemoveItem, total }) => {
@@ -25,27 +26,12 @@ const Cart = ({ isOpen, onClose, cart, onUpdateQuantity, onRemoveItem, total }) 
             <>
               <div className="cart-items">
                 {cart.map(item => (
-                  <div key={item.id} className="cart-item">
-                    <div className="item-info">
-                      <h4>{item.name}</h4>
-                      <p>${item.price}</p>
-                    </div>
-                    <div className="quantity-controls">
-                      <button onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}>
-                        -
-                      </button>
-                      <span>{item.quantity}</span>
-                      <button onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}>
-                        +
-                      </button>
-                    </div>
-                    <button 
-                      className="remove-item"
-                      onClick={() => onRemoveItem(item.id)}
-                    >
-                      Remove
-                    </button>
-                  </div>
+                  <CartItem
+                    key={item.id}
+                    item={item}
+                    onUpdateQuantity={onUpdateQuantity}
+                    onRemove={onRemoveItem}
+                  />
                 ))}
               </div>
               

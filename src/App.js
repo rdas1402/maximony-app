@@ -1,6 +1,6 @@
 // src/App.js
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import BrandBackground from './components/BrandBackground';
 import Home from './pages/Home';
@@ -12,6 +12,17 @@ import Media from './pages/Media';
 import ProductDetail from './pages/ProductDetail';
 import Cart from './components/Cart';
 import './styles/App.css';
+
+// ScrollToTop component - will scroll to top on every route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -58,6 +69,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <BrandBackground />
         <Header 
           cartItemCount={getCartItemCount()}
